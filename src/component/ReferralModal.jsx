@@ -22,7 +22,10 @@ const ReferralModal = ({ isOpen, onClose }) => {
     console.log("Referring:", refer);
 
     try {
-      await axios.post("http://localhost:5001/refer", refer);
+      await axios.post(
+        "https://accredian-backend-task-xxke.onrender.com/refer",
+        refer
+      );
     } catch (err) {
       console.log(err);
     }
